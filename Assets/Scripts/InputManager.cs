@@ -12,6 +12,7 @@ public class InputManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            Debug.Log("Space Pressed");
             onSpacePressed?.Invoke();
         }
         
