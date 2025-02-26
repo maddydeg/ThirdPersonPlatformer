@@ -240,9 +240,9 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 999.2
-  field of view: 60.000004
+  near clip plane: 0.29
+  far clip plane: 80.1
+  field of view: 90.7
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -268,8 +268,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2534013, y: 9.241355e-10, z: -2.4207827e-10, w: 0.9673613}
-  m_LocalPosition: {x: 0, y: 3.65, z: -4}
+  m_LocalRotation: {x: 0.12218328, y: -8.4935525e-16, z: 1.0456042e-16, w: 0.9925076}
+  m_LocalPosition: {x: 0, y: 2.4, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -543,8 +543,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inputManager: {fileID: 2026616410}
-  speed: 8
-  jumpForce: 400
+  speed: 5
+  jumpForce: 300
 --- !u!54 &480379486
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1156,7 +1156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TargetOffset: {x: 0, y: 0, z: 0}
   TrackerSettings:
-    BindingMode: 3
+    BindingMode: 4
     PositionDamping: {x: 1, y: 1, z: 1}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
@@ -1166,13 +1166,13 @@ MonoBehaviour:
   Orbits:
     Top:
       Radius: 2
-      Height: 5
+      Height: 2
     Center:
       Radius: 4
-      Height: 2.25
+      Height: 1
     Bottom:
       Radius: 2.5
-      Height: 0.1
+      Height: -1
     SplineCurvature: 0.5
   RecenteringTarget: 2
   HorizontalAxis:
@@ -1229,10 +1229,10 @@ MonoBehaviour:
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
-    FieldOfView: 60.000004
+    FieldOfView: 90.7
     OrthographicSize: 5
-    NearClipPlane: 0.3
-    FarClipPlane: 999.2
+    NearClipPlane: 0.29
+    FarClipPlane: 80.1
     Dutch: 0
     ModeOverride: 0
     PhysicalProperties:
@@ -1256,13 +1256,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2118242834}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2534013, y: 9.853021e-10, z: -4.755821e-10, w: 0.9673613}
-  m_LocalPosition: {x: 0, y: 3.65, z: -4}
+  m_LocalRotation: {x: 0.12218327, y: -8.235961e-16, z: -1.04683776e-16, w: 0.9925076}
+  m_LocalPosition: {x: 0, y: 2.4, z: -4}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 25, y: 0, z: 0}
 --- !u!1001 &3186581147463075106
 PrefabInstance:
   m_ObjectHideFlags: 0
