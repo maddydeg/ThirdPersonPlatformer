@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         Debug.Log("OnCollisionEnter ran!");
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Ground")&&onGround==false)
         {
             Debug.Log("onGround set to true");
             onGround = true;
