@@ -24,17 +24,19 @@ public class PlayerController : MonoBehaviour
     //MovePlayer is called when W, A, S, D and/or space is pressed 
     void MovePlayer(Vector2 direction)
     {
-
         Vector3 forwardDirection = directionIndicator.forward;
         Vector3 rightDirection = directionIndicator.right;
+
         //zero out both y so you cant run up in to space or down through the floor...
         forwardDirection.y = 0;
         rightDirection.y = 0;
 
         Vector3 moveDirection = (forwardDirection*direction.y+rightDirection*direction.x);
 
-        //Vector3 moveDirection = new(direction.x, 0f, direction.y);
-        rb.AddForce(speed * moveDirection);
+        //preserve vertical velocity but set horizontal
+        Vector3 currentVelocity = rb.linearVelocity;
+        rb.linearVelocity = new Vector3(moveDirection.x * speed, currentVelocity.y, moveDirection.z * speed);
+
     }   
 
     //Jumps only when players are on the ground
