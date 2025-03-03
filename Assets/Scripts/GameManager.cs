@@ -1,9 +1,12 @@
+using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private int score = 0;
+    [SerializeField] TextMeshProUGUI scoreText;
     public static GameManager Instance;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,5 +31,6 @@ public class GameManager : MonoBehaviour
     {
         score++;
         Debug.Log("Score updated to: " + score);
+        scoreText.text = $"Score: {score}";
     }
 }
