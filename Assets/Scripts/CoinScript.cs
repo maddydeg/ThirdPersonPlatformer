@@ -7,17 +7,24 @@ public class CoinScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void FixedUpdate()
     {
         transform.Rotate(0, rotateSpeed, 0);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Player touched a coin");
+            //TODO: Implement score increase
+            GameManager.Instance.AddScore();
+            //Destroy the coin
+            Destroy(gameObject);
+        }
+    }
+    
 }
